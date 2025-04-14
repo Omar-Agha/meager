@@ -8,7 +8,7 @@
             </div>
             <nav class="space-x-6 rtl:space-x-reverse text-white">
                 <a :href="item.url"
-                    :class="['line-effect ', scrolled ? 'hover:text-black primary-line-effect ' : 'hover:text-app-secondary-100 white-line-effect']"
+                    :class="['line-effect ', scrolled ? ' primary-line-effect ' : 'hover:text-app-secondary-100 white-line-effect']"
                     v-for="item in nav_items">{{ item.text }}</a>
 
             </nav>
