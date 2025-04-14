@@ -5,6 +5,7 @@
 [x-cloak] {
     display: none;
 }
+
 input:focus {
     box-shadow: none !important;
 }
@@ -12,3 +13,23 @@ input:focus {
 .dash-headline {
     font-weight: bold;
 }
+
+
+
+
+@layer base {
+    body {
+        /* @apply font-ev bg-app-primary-dark pb-28 overflow-x-clip; */
+        @apply bg-app-primary;
+    }
+}
+
+body {
+
+    min-height: 1000px;
+}
+
+
+/* 1F1F1F */
+/* 3A4D39 */
+/* 2D2D2D */
