@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import CTA from "@/Assets/CTA.vue";
 import landingImage from "@/Assets/Images/01.png"
 </script>
 
@@ -24,6 +25,12 @@ import landingImage from "@/Assets/Images/01.png"
                 الهوية المعمارية والمكانة الاستراتيجية للمنطقة كمركز اقتصادي وحيوي.
             </h2>
         </div>
+
+
+        <div class="cta-button absolute bottom-0 right-1/2  w-[200px] cursor-pointer  ">
+            <CTA stroke_color="#ddbf64" />
+        </div>
+
     </div>
 </template>
 

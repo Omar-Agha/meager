@@ -4,10 +4,11 @@
         <div class="container mx-auto flex justify-between items-center px-4 py-3">
             <div class="text-2xl font-bold text-white">
                 <AppLogo :class="['transition-all fill-app-secondary- duration-500 ', scrolled ? 'w-[30%]' : 'w-[70%]']"
-                    :logo_css_class="scrolled ? 'fill-app-primary-900' : 'fill-app-secondary '" />
+                    :paths_classes="scrolled ? 'fill-app-primary-900' : 'fill-app-secondary '" />
             </div>
             <nav class="space-x-6 rtl:space-x-reverse text-white">
-                <a :href="item.url" :class="[scrolled ? 'hover:text-black' : 'hover:text-app-secondary-100']"
+                <a :href="item.url"
+                    :class="['line-effect ', scrolled ? 'hover:text-black primary-line-effect ' : 'hover:text-app-secondary-100 white-line-effect']"
                     v-for="item in nav_items">{{ item.text }}</a>
 
             </nav>
@@ -53,4 +54,16 @@ onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
 })
 </script>
-<style scoped></style>
+<style scoped>
+.line-effect {
+    @apply relative after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-[3px] after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:left-0;
+}
+
+.white-line-effect {
+    @apply after:bg-app-secondary-300;
+}
+
+.primary-line-effect {
+    @apply after:bg-white;
+}
+</style>
